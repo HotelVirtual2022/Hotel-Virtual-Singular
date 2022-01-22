@@ -1,26 +1,26 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//[System.Serializable]
+[Serializable]
 public class ItemInventario
 {
-    public Item informacion {get; private set;}
-    public int tamanio {get; private set;}
+    public ItemData data { get; private set; }
+    public int stackSize { get; private set; }
 
-    public ItemInventario(Item data)
+    public ItemInventario(ItemData source)
     {
-        data = fuente;
+        data = source;
         AddToStack();
     }
 
     public void AddToStack()
     {
-        tamanio++;
+        stackSize++;
     }
-
     public void RemoveFromStack()
     {
-        tamanio--;
+        stackSize--;
     }
 }
