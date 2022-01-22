@@ -22,6 +22,7 @@ public class Slots : MonoBehaviour
 
     public void Set(ItemInventario item)
     {
+        //Asigna información del item al slot
         m_icon.sprite = item.data.icono;
         m_label.text = item.data.nombre;
         m_prefabItem = item.data.prefab;
@@ -37,8 +38,14 @@ public class Slots : MonoBehaviour
     {
         if (m_prefabItem != null)
         {
-            Vector3 position = GameObject.FindGameObjectWithTag("Player").transform.position;
-            GameObject obj = GameObject.Instantiate(m_prefabItem, position, Quaternion.identity);
+            //Busca punto spawn
+            GameObject player =GameObject.FindGameObjectWithTag("Player");
+            //Define la posisión en la que se generará el item
+            Vector3 position = player.transform.position + (player.transform.up * 2f) + (player.transform.forward * 2f);
+            //Asigna la rotación del item respecto al punto de spawn
+            Quaternion playerRotation = player.transform.rotation;
+            //Genera el item
+            GameObject obj = GameObject.Instantiate(m_prefabItem, position, playerRotation);
             ItemObject item = obj.GetComponent<ItemObject>();
             item.Dejar();
         }

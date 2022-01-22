@@ -5,13 +5,14 @@ using UnityEngine;
 public class ItemObject : MonoBehaviour
 {
     public ItemData itemReferencia;
-    public SistemaInventario inventario;
+    private SistemaInventario inventario;
     private void Awake()
     {
         inventario = GameObject.FindGameObjectWithTag("SistemaInventario").GetComponent<SistemaInventario>();
     }
     public void Inventariar()
     {
+        //Añade item a la lista y destruye GameObject de la escena
         inventario.Add(itemReferencia);
         Destroy(gameObject);
     }

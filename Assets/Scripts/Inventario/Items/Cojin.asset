@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15bde2b5197015547bc46448cf9ade31, type: 3}
-  m_Name: Cenicero
+  m_Name: Cojin
   m_EditorClassIdentifier: 
-  id: 1
-  nombre: Cenicero
-  descripcion: Para dejar cenizas
-  icono: {fileID: 21300000, guid: 2f1eaeeaad36ee5469eff7ff158f37ba, type: 3}
-  prefab: {fileID: 4573097746351182152, guid: 668d18d6cfe62eb6bb3951bb5993ff12, type: 3}
+  id: 2
+  nombre: Cojin
+  descripcion: 
+  icono: {fileID: 21300000, guid: 7fd1ada8ff6de7444bbfd5f2ae29db75, type: 3}
+  prefab: {fileID: 8345514903915298488, guid: 37f47f86837094a448dab3516c1ada01, type: 3}
