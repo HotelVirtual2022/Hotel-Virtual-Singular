@@ -8,15 +8,6 @@ public class InventoryManager : MonoBehaviour
     private GameObject m_slotPrefab;
 
     public SistemaInventario sistema;
-    void Start()
-    {
-        //SistemaInventario.current.onInventoryChangedEvent += OnUpdateInventory;
-    }
-
-    private void Update()
-    {
-        OnUpdateInventory();
-    }
 
     public void OnUpdateInventory()
     {

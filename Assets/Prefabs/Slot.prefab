@@ -198,7 +198,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5781944122469678782}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7855209614629069134}
+        m_TargetAssemblyTypeName: Slots, Assembly-CSharp
+        m_MethodName: SpawnItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7855209614629069134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,6 +227,7 @@ MonoBehaviour:
   m_label: {fileID: 5092771939203707682}
   m_stackObj: {fileID: 8137983303320415404}
   m_stackLabel: {fileID: 4426218401699507408}
+  m_prefabItem: {fileID: 0}
 --- !u!1 &5885869015388363164
 GameObject:
   m_ObjectHideFlags: 0

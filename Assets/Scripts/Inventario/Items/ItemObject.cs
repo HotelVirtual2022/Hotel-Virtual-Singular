@@ -15,4 +15,9 @@ public class ItemObject : MonoBehaviour
         inventario.Add(itemReferencia);
         Destroy(gameObject);
     }
+
+    public void Dejar()
+    {
+        inventario.Remove(itemReferencia);
+    }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class SistemaInventario : MonoBehaviour
 {
     //public static SistemaInventario current;
+    public InventoryManager managerInventario;
     private Dictionary<ItemData, ItemInventario> m_itemDictionary;
     public List<ItemInventario> inventario { get; private set; }
 
@@ -28,12 +29,14 @@ public class SistemaInventario : MonoBehaviour
         if (m_itemDictionary.TryGetValue(dataReferencia, out ItemInventario value))
         {
             value.AddToStack();
+            managerInventario.OnUpdateInventory();
         }
         else
         {
             ItemInventario newItem = new ItemInventario(dataReferencia);
             inventario.Add(newItem);
             m_itemDictionary.Add(dataReferencia, newItem);
+            managerInventario.OnUpdateInventory();
         }
     }
 
@@ -42,11 +45,13 @@ public class SistemaInventario : MonoBehaviour
         if (m_itemDictionary.TryGetValue(dataReferencia, out ItemInventario value))
         {
             value.RemoveFromStack();
+            managerInventario.OnUpdateInventory();
         }
         if(value.stackSize == 0)
         {
             inventario.Remove(value);
             m_itemDictionary.Remove(dataReferencia);
+            managerInventario.OnUpdateInventory();
         }
     }
 }

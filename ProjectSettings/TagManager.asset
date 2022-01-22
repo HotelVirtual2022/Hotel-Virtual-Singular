@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Objeto Interactivo
   - Item
+  - SistemaInventario
   layers:
   - Default
   - TransparentFX

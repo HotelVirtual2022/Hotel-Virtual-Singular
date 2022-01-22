@@ -17,10 +17,14 @@ public class Slots : MonoBehaviour
     [SerializeField]
     private Text m_stackLabel;
 
+    [SerializeField]
+    private GameObject m_prefabItem;
+
     public void Set(ItemInventario item)
     {
         m_icon.sprite = item.data.icono;
         m_label.text = item.data.nombre;
+        m_prefabItem = item.data.prefab;
         if (item.stackSize <= 1)
         {
             m_stackObj.SetActive(false);
@@ -29,4 +33,14 @@ public class Slots : MonoBehaviour
         m_stackLabel.text = item.stackSize.ToString();
     }
 
+    public void SpawnItem()
+    {
+        if (m_prefabItem != null)
+        {
+            Vector3 position = GameObject.FindGameObjectWithTag("Player").transform.position;
+            GameObject obj = GameObject.Instantiate(m_prefabItem, position, Quaternion.identity);
+            ItemObject item = obj.GetComponent<ItemObject>();
+            item.Dejar();
+        }
+    }
 }

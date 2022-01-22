@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7301293440134903757}
   - component: {fileID: 4246544853052430627}
   - component: {fileID: 6680102458073519994}
+  - component: {fileID: 8991684704646324725}
   m_Layer: 0
   m_Name: Aguas
   m_TagString: Untagged
@@ -69,6 +70,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &8991684704646324725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146481975988249310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c72a466ef6fec847b116cb15f888ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemReferencia: {fileID: 11400000, guid: 14f75d6a66cd8084cb5daf918b79bd2b, type: 2}
+  inventario: {fileID: 0}
 --- !u!1 &4086305713767343586
 GameObject:
   m_ObjectHideFlags: 0
